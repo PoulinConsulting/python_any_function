@@ -57,7 +57,7 @@ customers_owing_money = [
             if invoice.balance_due() > 0
 ]
 ```
-No, because this might produce duplicate customers in the final output. I must consider the customer's invoices as a group, not individually.
+No, because this might produce duplicate customers in the final output. The `any` function avoids this problem by reducing all the customer's invoices to a single True/False result.
 
 ## Additional information
 See [Stack Overflow: How exactly does the python any() function work?
