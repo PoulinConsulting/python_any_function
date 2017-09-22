@@ -53,8 +53,8 @@ However, couldn't I write this instead?
 customers_owing_money = [
     customer 
     for customer in customers
-    for invoice in customer.invoices()
-    if invoice.balance_due() > 0
+        for invoice in customer.invoices()
+            if invoice.balance_due() > 0
 ]
 ```
 No, because this might produce duplicate customers in the final output. I must consider the customer's invoices as a group, not individually.
